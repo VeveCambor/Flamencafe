@@ -1,0 +1,65 @@
+ *, 
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(39, 39, 39);
+
+}
+
+html, body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bg-image {
+  background-image: url('../img/cover/Cover.jpg');
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0); 
+  position: fixed;
+  width: 88%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  padding: 20px 0px 0px 10px;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  background: none;
+  color: rgb(211, 38, 48);
+  text-align: center;
+  /* padding: 14px 25px; */
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #000;
+}  
+
+.logo {
+  position: absolute;
+  background-color: transparent;
+  width: 45%;
+  height: 25%;
+  left: 35%;
+  transform: translateX(-50%); 
+  bottom: 1%;
+  z-index: 5; 
+}
+
+
+
+
+
+
