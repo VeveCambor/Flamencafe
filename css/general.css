@@ -14,6 +14,11 @@
   padding: 0;
 }
 
+main {
+  background-color: var(--bg-color);
+  /* bottom: 50px; */
+}
+
 body  {
   font-family: Verdana, Geneva, Tahoma, sans-serif; 
   font-size: 16px;
@@ -28,17 +33,19 @@ background-repeat: no-repeat;
 height: 100vh; 
 width: 100%;
 position: relative;
+bottom: 50px;
 z-index: 1; 
 }
 
 /* Navigation */
 header {
   background: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+  /* top: 50px; */
+  /* left: 0; */
   width: 100%;
   z-index: 1000;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -118,7 +125,9 @@ section {
   padding: 20px; 
 }
 .about-text {
-  margin-bottom: 20px; 
+  margin-bottom: 3rem; 
+  font-size: 24px;
+  font-style: italic;
 }
 
 .band-members {
@@ -177,13 +186,13 @@ h1 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 34px;
+  font-style: italic;
 }
 
 .gallery .main-photo img {
   width: 80%;
   height: auto;
-  margin-bottom: 20px;
-  margin-top: 3rem;
+  margin-bottom: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
@@ -213,6 +222,23 @@ h1 {
   .gallery {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
   }
+}
+
+/* LOGO */
+.logo-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  top: 200px; 
+}
+
+.logo {
+  width: 30%;
+  display: block;
+  margin-right: 3rem;
 }
 
 /* Footer */
