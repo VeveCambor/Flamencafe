@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flamencafe</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="./css/general.css">
 </head>
 <body>
@@ -30,18 +31,22 @@
   </header>
  <main>     
    <div class="bg-image" id="home"></div>
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <div class="about-content">
         <div class="about-text">
           <h1>O skupině</h1>
-          <p>Flamenco...příme a emotivní, je zdrojem hudby pražské skupiny FlamencaFe, která rozvíjí jeho sílu vlastními výrazovými prostředky tak, aby jejich hudba nebyla pouhou imitací, ale autentickou "fusión", fúzí v nejlepším slova smyslu.</p>
+          <p>Flamenco...příme a emotivní, je zdrojem hudby pražské skupiny FlamencaFe, která rozvíjí jeho sílu vlastními výrazovými prostředky tak, aby jejich hudba nebyla pouhou imitací, ale autentickou "fusión", fúzí v nejlepším slova smyslu.
+            <br>
+            <br>
+             Flamencafe...flamen cafe...flameca fe...FlamencaFe
+          </p>
         </div>
         <div class="band-members">
           <div class="band-member-card">
             <div class="">
               <img src="./img/portrets/IMG_9003.jpg" alt="band member">
               <h3>David</h3>
-              <p>Kitara</p>
+              <p>Kytara</p>
             </div>
           </div>
           <div class="band-member-card">
@@ -55,7 +60,7 @@
             <div class="">
               <img src="./img/portrets/IMG_9087.jpg" alt="band member">
               <h3>Petr</h3>
-              <p>Basskitara</p>
+              <p>Basskytara</p>
             </div>
           </div>
           <div class="band-member-card">
@@ -67,7 +72,7 @@
           </div>
         </div>
     </section>
-    <section id="gallery">
+    <section id="gallery" data-aos="fade-up">
       <div class="gallery">
         <h1 class="gallery-title">Galerie</h1>
         <div class="main-photo">
@@ -81,15 +86,17 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <div class="contact-content">
         <h1>Kontaktujte nás</h1>
-        <!-- <form action="index.php" method="post">
-          <input type="text" name="name" id="name" placeholder="Vaše jméno" required>
-          <input type="email" name="email" id="email" placeholder="Váš email" required>
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Vaše zpráva" required></textarea>
-          <button type="submit">Odeslat</button>
-        </form> -->
+        <form action="index.php" method="post">
+          <div class="form-wrap">
+            <input type="text" name="name" id="name" placeholder="Vaše jméno" required>
+            <input type="email" name="email" id="email" placeholder="Váš email" required>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Vaše zpráva" required></textarea>
+            <button type="submit">Odeslat</button>
+          </div>
+        </form>
         <div class="logo-wrap">
           <img class="logo" src="./img/logo/FlamencafeLogo2.png" alt="Flamencafe logo">
         </div>
@@ -103,3 +110,4 @@
 </body>
 </html>
 <script src="./flamencaFe.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
