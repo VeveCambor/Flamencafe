@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(211, 38, 48);
+  --primary-color: rgb(251, 1, 13);
   --secondary-color: rgb(0, 0, 0);
   --terciary-color: rgb(255, 255, 255);
   --bg-color: rgb(39, 39, 39);
@@ -18,7 +18,6 @@ main {
   background-color: var(--bg-color);
   height: 100vh;
   height: 100%;
-  /* bottom: 50px;  */
 }
 
 body {
@@ -44,6 +43,7 @@ body {
 /* Navigation */
 header {
   background: none;
+  background: rgba(32, 32, 32, 0.4);
   position: relative;
   top: 0px;
   left: 0;
@@ -54,10 +54,11 @@ header {
 
 .navbar {
   background: none;
-  /* background-color: rgba(35, 34, 34, 0.3); */
-  position: relative;
+  /* background-color: rgba(32, 32, 32, 0.4); */
+  position: fixed;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   max-width: 1700px;
   width: 100%;
   height: 50px;
@@ -114,23 +115,28 @@ section {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   width: 100%;
   background-color: var(--bg-color);
   color: var(--terciary-color);
-  /* padding-top: 2rem; */
 }
 
 section#home {
-  background-image: url('../img/cover/background2.png');
+  background-image: url('../img/cover/IMG_9417.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
-  bottom: 50px;
   z-index: 1;
+}
+
+.home-logo {
+  width: 55%;
+  position: relative;
+  top: 250px;
+  right: 22%;
 }
 
 #contact, #gallery {
@@ -154,13 +160,14 @@ section#home {
 .band-members {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   padding: 10px 0;
 }
 
 .band-member-card {
   background-color: var(--terciary-color);
   width: 100%;
+  height: 500px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -168,13 +175,6 @@ section#home {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.band-member-card img {
-  width: 100%;
-  min-height: 500px;
-  object-fit: cover;
-  /* height: auto;  */
 }
 
 .band-member-card h3,
@@ -188,6 +188,23 @@ section#home {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
+.band-member-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px; 
+  object-fit: contain;
+}
+
 
 /* Gallery */
 h1 {
