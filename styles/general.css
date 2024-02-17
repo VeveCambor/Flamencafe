@@ -1,0 +1,63 @@
+:root {
+  --primary-color: rgb(251, 1, 13);
+  --secondary-color: rgb(0, 0, 0);
+  --terciary-color: rgb(255, 255, 255);
+  --bg-color: rgb(39, 39, 39);
+  --nav-bg_mobile: rgb(0, 0, 0, 0.7);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: var(--bg-color);
+  height: 100vh;
+  height: 100%;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* Sections */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--terciary-color);
+}
+
+.p {
+  text-shadow: 0 4px 8px rgba(0, 0, 0);
+}
+
+#contact,
+#gallery {
+  padding-top: 8rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 34px;
+  font-style: italic;
+}
+
+span {
+  color: var(--primary-color)
+}

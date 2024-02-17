@@ -1,0 +1,92 @@
+
+@media screen and (max-width: 950px) {
+  body {
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    flex-direction: column;
+    background: rgb(30, 30, 30);
+    padding: 2rem;
+    font-size: 20px;
+  }
+
+  .nav-link {
+    color: var(--terciary-color);
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color);
+  }
+
+  .nav-links.hide {
+    display: none;
+  }
+
+  .bg-image,
+  .bg-image::after {
+    height: 50vh;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+.band-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .band-member-card {
+    width: 60%;
+    margin: 10px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+  }
+
+  .form-wrap {
+    width: 80%;
+  }
+
+  button[type="submit"] {
+    width: 40%;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .home-logo {
+    width: 80%;
+    position: relative;
+    top: 150px;
+    right: 10%;
+  }
+
+
+  body {
+    font-size: 14px;
+  }
+
+}
