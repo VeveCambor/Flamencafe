@@ -1,4 +1,6 @@
 /* About */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Rosarivo:ital@0;1&display=swap');
+
 .about-content {
   text-align: center;
   max-width: 1200px;
@@ -7,9 +9,24 @@
 }
 
 .about-text {
-  margin-bottom: 3rem;
-  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
   font-style: italic;
+}
+
+h3 {
+  font-size: 26px;
+  font-family: 'Dancing Script', serif;
+}
+
+.logo-variation {
+  font-family: 'Dancing Script', serif;
+  font-size: 2rem;
 }
 
 .band-members {
