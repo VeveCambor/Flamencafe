@@ -3,6 +3,19 @@ document.querySelector('.menu-icon').addEventListener('click', function() {
   document.querySelector('.nav-links').classList.toggle('hide');
 });
 
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  const sectionHome = document.getElementById('home').offsetTop + document.getElementById('home').offsetHeight;
+  const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (scrollPosition >= sectionHome) {
+    navbar.classList.add('nav-other-sections');
+  } else {
+    navbar.classList.remove('nav-other-sections');
+  }
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM fully loaded and parsed');
   document.querySelectorAll('.gallery-item').forEach(item => {

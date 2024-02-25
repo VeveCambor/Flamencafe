@@ -65,3 +65,5 @@ header {
 .menu-icon:hover {
   color: var(--secondary-color);
 }
+
+.nav-other-sections { background-color: #191818f0; }
