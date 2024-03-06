@@ -1,3 +1,8 @@
+@media screen and (max-width: 1024px){
+  button[type="submit"] {
+    width: 40%;
+  }
+}
 
 @media screen and (max-width: 950px) {
   body {
@@ -9,12 +14,17 @@
     display: block;
   }
 
+  .navbar {
+    justify-content: space-between;
+  }
+
   .nav-links {
     position: absolute;
     top: 50px;
     width: 100%;
     flex-direction: column;
-    background: rgb(30, 30, 30);
+    align-items: start;
+    background: #191818f0;;
     padding: 2rem;
     font-size: 20px;
   }
@@ -43,18 +53,21 @@
   section {
     padding: 0 10px;
   }
+
+  button[type="submit"] {
+    width: 40%;
+  }
 }
 
-@media (max-width: 768px) {
-
-.band-members {
+@media screen and (max-width: 768px) {
+  .band-members {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .band-member-card {
-    width: 60%;
+    width: 40%;
     margin: 10px;
   }
 
@@ -62,7 +75,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 95%;
+    width: 90%;
   }
 
   .form-wrap {
@@ -84,9 +97,117 @@
     right: 10%;
   }
 
-
   body {
     font-size: 14px;
   }
 
 }
+
+@media screen and (max-width: 425px) {
+
+  .band-member-card {
+    width: 80%;
+  }
+
+  .gallery {
+    width: 50%;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form-wrap {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 60%;
+  }
+
+  .logo {
+    width: 80%;
+  }
+
+  .home-logo {
+    width: 100%;
+    position: relative;
+    top: 150px;
+    right: 0;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .band-member-card {
+    width: 100%;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  .form-wrap {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 80%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .home-logo {
+    width: 100%;
+    position: relative;
+    top: 150px;
+    right: 0;
+  }
+
+  body {
+    font-size: 12px;
+  }
+  
+}
+
+@media screen and (max-width: 320px){
+
+  .band-member-card {
+    width: 100%;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  .form-wrap {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .home-logo {
+    width: 100%;
+    position: relative;
+    top: 150px;
+    right: 0;
+  }
+
+  body {
+    font-size: 12px;
+  }
+  
+}
+
+

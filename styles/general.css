@@ -39,23 +39,19 @@ section {
   width: 100%;
   background-color: var(--bg-color);
   color: var(--terciary-color);
+  padding-bottom: 3rem;
 }
 
 .p {
   text-shadow: 0 4px 8px rgba(0, 0, 0);
 }
 
-#contact,
-#gallery {
-  padding-top: 8rem;
-}
-
 h1 {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: 34px;
-  font-style: italic;
+  font-size: 48px;
+  font-weight: 500;
 }
 
 span {

@@ -51,7 +51,7 @@ h3 {
 
 .band-member-card h3,
 .band-member-card p {
-  margin: 10px;
+  margin: 6px;
   color: var(--secondary-color);
   text-align: center;
 }
