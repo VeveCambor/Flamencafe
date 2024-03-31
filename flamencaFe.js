@@ -1,4 +1,4 @@
-// JavaScript
+// NAVBAR
 document.querySelector('.menu-icon').addEventListener('click', function() {
   document.querySelector('.nav-links').classList.toggle('hide');
 });
@@ -15,28 +15,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   console.log('DOM fully loaded and parsed');
-//   document.querySelectorAll('.gallery-item').forEach(item => {
-//     console.log('Adding click event listener to gallery item');
-//     item.addEventListener('click', event => {
-//       console.log('Gallery item clicked');
-//       const mainImage = document.getElementById('mainImage');
-//       const newImageSrc = event.target.getAttribute('data-img');
-//       console.log('New image src: ', newImageSrc);
-//       mainImage.src = newImageSrc;
-//       mainImage.alt = event.target.alt;
-//     });
-//   });
-// });
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   AOS.init({
-//     duration: 2000,
-//   });
-// });
-
+// CONTACT FORM
 const validateForm = () => {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
@@ -63,23 +42,22 @@ const validateForm = () => {
   }
 }
 
-document.getElementById('contact-form').addEventListener('submit', validateForm);
+// document.getElementById('contact-form').addEventListener('submit', validateForm);
 
 
 //GALLERY
-// document.addEventListener('DOMContentLoaded', function () {
-//     var swiper = new Swiper('.swiper-container', {
-//         slidesPerView: 3,
-//         spaceBetween: 10,
-//         navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev',
-//         },
-//     });
+function changeMainImage(src) {
+  document.getElementById('mainImage').src = src;
+}
 
-//     window.changeMainImage = function(src) {
-//         document.getElementById('mainImage').src = src;
-//     }
-// });
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.prev-arrow').addEventListener('click', () => {
+    document.querySelector('.preview-slider').scrollLeft -= 110;
+  });
+
+  document.querySelector('.next-arrow').addEventListener('click', () => {
+    document.querySelector('.preview-slider').scrollLeft += 110;
+  });
+});
 
 

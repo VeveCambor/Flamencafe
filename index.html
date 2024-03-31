@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flamencafe</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="./styles/general.css">
   <link rel="stylesheet" href="./styles/header.css">
   <link rel="stylesheet" href="./styles/home.css">
@@ -14,8 +13,6 @@
   <link rel="stylesheet" href="./styles/footer.css">
   <link rel="stylesheet" href="./styles/responsive.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body> 
   <main>
@@ -48,7 +45,7 @@
   </section> 
     <section id="about">
       <div class="about-content"> 
-        <h1>O nás</h1>
+        <!-- <h1>O nás</h1> -->
         <div class="about-text">
           <p>
             Flamenco...příme a emotivní, je zdrojem hudby pražské skupiny FlamencaFe, která rozvíjí jeho sílu vlastními výrazovými prostředky tak, aby jejich hudba nebyla pouhou imitací, ale autentickou "fusión", fúzí v nejlepším slova smyslu.
@@ -145,24 +142,6 @@
   </main>
   
 <script src="./flamencaFe.js"></script>
-<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-<script>
-  function changeMainImage(src) {
-      document.getElementById('mainImage').src = src;
-  }
-
-  document.querySelector('.prev-arrow').addEventListener('click', () => {
-    // Logika pro posun doleva, posune o šířku jednoho náhledu včetně margin
-    document.querySelector('.preview-slider').scrollLeft -= 110; // 100px + 2*5px margin
-});
-
-document.querySelector('.next-arrow').addEventListener('click', () => {
-    // Logika pro posun doprava, posune o šířku jednoho náhledu včetně margin
-    document.querySelector('.preview-slider').scrollLeft += 110; // 100px + 2*5px margin
-});
-
-
-</script>
 </body>
 </html>
 
