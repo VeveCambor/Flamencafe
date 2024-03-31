@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $recipient = "yourEmail@example.com"; // Nahraďte svou emailovou adresu
+    $recipient = "camborova.veronika@gmail.com"; // Nahraďte svou emailovou adresu
     $subject = "New contact from $name";
     $email_content = "Name: $name\n";
     $email_content .= "Email: $email\n\n";
