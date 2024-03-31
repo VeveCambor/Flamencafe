@@ -115,26 +115,28 @@
     <section id="contact">
       <div class="contact-content">
         <h1>Kontaktujte nás</h1>
-        <form action="index.php" method="post" onsubmit="return validateForm()">
+        <form id="contactForm">
           <div class="form-wrap">
             <input type="text" name="name" id="name" placeholder="Vaše jméno" required>
             <input type="email" name="email" id="email" placeholder="Váš email" required>            
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="error message" required></textarea>            
-            <p id="error-message" style="color: red; display: block;"></p>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Text zprávy" required></textarea>            
+            <p id="error-message" style="color: red; display: none;"></p> <!-- Skryje se pokud není chyba -->
             <button type="submit">Odeslat</button>
           </div>
         </form>
-        <div class="social-icons">
-          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-        </div>
+        
       </div>
+      <div id="formMessage" style="color: green; margin-top: 20px;"></div>
     </section>
 
     <footer>
     <div class="footer-content">
       <div class="logo-wrap">
         <img class="logo" src="./img/logo/FlamencafeLogo2.png" alt="Flamencafe logo">
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/musicaflamencafe" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/flamencafe/" class="social-icon"><i class="fab fa-instagram"></i></a>
       </div>
       <!-- <p>Flamencafe &copy; 2024</p> -->
     </div>  

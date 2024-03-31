@@ -53,10 +53,6 @@
   section {
     padding: 0 10px;
   }
-
-  button[type="submit"] {
-    width: 40%;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -78,17 +74,9 @@
     width: 90%;
   }
 
-  .form-wrap {
-    width: 80%;
-  }
-
-  button[type="submit"] {
-    width: 40%;
-  }
-
-  .logo {
+  /* .logo {
     width: 50%;
-  }
+  } */
 
   .home-logo {
     width: 80%;
@@ -117,17 +105,9 @@
     width: 100%;
   }
 
-  .form-wrap {
-    width: 100%;
-  }
-
-  button[type="submit"] {
-    width: 60%;
-  }
-
-  .logo {
+  /* .logo {
     width: 80%;
-  }
+  } */
 
   .home-logo {
     width: 100%;
@@ -150,17 +130,9 @@
     width: 100%;
   }
 
-  .form-wrap {
+  /* .logo {
     width: 100%;
-  }
-
-  button[type="submit"] {
-    width: 80%;
-  }
-
-  .logo {
-    width: 100%;
-  }
+  } */
 
   .home-logo {
     width: 100%;
@@ -185,17 +157,9 @@
     width: 100%;
   }
 
-  .form-wrap {
+  /* .logo {
     width: 100%;
-  }
-
-  button[type="submit"] {
-    width: 100%;
-  }
-
-  .logo {
-    width: 100%;
-  }
+  } */
 
   .home-logo {
     width: 100%;
@@ -209,5 +173,3 @@
   }
   
 }
-
-

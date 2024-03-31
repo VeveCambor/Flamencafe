@@ -16,31 +16,35 @@ window.addEventListener('scroll', () => {
 });
 
 // CONTACT FORM
-const validateForm = () => {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-  const errorElement = document.getElementById('error-message');
-  let errorMessage = '';
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Zabrání klasickému odeslání formuláře
 
-  if (name === '' || name == null) {
-    errorMessage = 'Name is required';
-  }
+    var formData = new FormData(this);
+    var errorMessage = document.getElementById('error-message');
 
-  if (email === '' || email == null) {
-    errorMessage = 'Email is required';
-  }
+    fetch('sendEmail.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text()) // Převede odpověď na text
+    .then(data => {
+        // Zpracování odpovědi serveru
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = data;
+        errorMessage.style.color = 'green'; // Nastaví text zprávy na zelenou, pokud je vše v pořádku
+        // Vymaže formulář po úspěšném odeslání
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+    })
+    .catch((error) => {
+        // Zpracování chyby
+        errorMessage.style.display = 'block';
+        errorMessage.style.color = 'red'; // Zobrazí chybovou zprávu v červené barvě
+        errorMessage.textContent = 'Něco se pokazilo, zkuste to prosím znovu.';
+    });
+});
 
-  if (message === '' || message == null) {
-    errorMessage = 'Message is required';
-  }
-
-  if (errorMessage !== '') {
-    errorElement.innerText = errorMessage;
-    errorElement.style.display = 'block';
-    return false;
-  }
-}
 
 // document.getElementById('contact-form').addEventListener('submit', validateForm);
 
