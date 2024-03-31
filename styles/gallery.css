@@ -1,26 +1,41 @@
-.gallery .main-photo img {
-  width: 80%;
-  height: auto;
-  margin-bottom: 1rem;
+.gallery .main-photo-container img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.item-photos {
+.preview-container {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+  margin-top: 20px;
 }
 
-.item-photos .gallery-item {
-  max-width: 200px;
-  max-height: 250px;
+.preview-slider {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 800px;
+}
+
+.preview-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.preview-photo {
+  min-width: 150px; /* Nastavte šířku náhledu */
+  margin: 0 5px; /* Mezera mezi náhledy */
   cursor: pointer;
-  transition: transform 0.2s ease;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
 }
 
-.item-photos .gallery-item:hover {
-  transform: scale(1.1);
+.slide-arrow {
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+  padding: 10px;
+  margin: 0 10px;
 }

@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./styles/footer.css">
   <link rel="stylesheet" href="./styles/responsive.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body> 
   <main>
@@ -86,20 +88,33 @@
           </div>
         </div>
     </section>
+
     <section id="gallery">
       <div class="gallery">
-        <h1 class="gallery-title">Galerie</h1>
-        <div class="main-photo">
-          <img id="mainImage" src="./img/gallery/IMG_9148.jpg" alt="Main Band Photo">
+        <h1>Galerie</h1>
+        <div class="main-photo-container">
+            <img id="mainImage" src="./img/gallery/IMG_9148.jpg" alt="Main Band Photo">
         </div>
-        <div class="item-photos">
-          <img class="gallery-item" src="./img/gallery/IMG_9526.jpg" alt="Band Photo 1" data-img="./img/gallery/IMG_9526.jpg">
-          <img class="gallery-item" src="./img/gallery/flamencafe-m.jpg" alt="Band Photo 2" data-img="./img/gallery/flamencafe-m.jpg">
-          <img class="gallery-item" src="./img/gallery/IMG_9148.jpg" alt="Band Photo 3" data-img="./img/gallery/IMG_9148.jpg">
-          <img class="gallery-item" src="./img/gallery/IMG_8951.jpg" alt="Band Photo 4" data-img="./img/gallery/IMG_8951.jpg">
+        <div class="preview-container">
+            <button class="slide-arrow prev-arrow">&#10094;</button>
+            <div class="preview-slider">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_9526.jpg')" src="./img/gallery/IMG_9526.jpg" alt="Band Photo 1">
+                <!-- Další náhledy -->
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/flamencafe-m.jpg')" src="./img/gallery/flamencafe-m.jpg" alt="Band Photo 2">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_9148.jpg')" src="./img/gallery/IMG_9148.jpg" alt="Band Photo 3">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_8951.jpg')" src="./img/gallery/IMG_8951.jpg" alt="Band Photo 4">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_9148.jpg')" src="./img/gallery/IMG_9148.jpg" alt="Band Photo 5">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_8951.jpg')" src="./img/gallery/IMG_8951.jpg" alt="Band Photo 6">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_9148.jpg')" src="./img/gallery/IMG_9148.jpg" alt="Band Photo 7">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_8951.jpg')" src="./img/gallery/IMG_8951.jpg" alt="Band Photo 8">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_9148.jpg')" src="./img/gallery/IMG_9148.jpg" alt="Band Photo 9">
+                <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_8951.jpg')" src="./img/gallery/IMG_8951.jpg" alt="Band Photo 10">
+            </div>
+            <button class="slide-arrow next-arrow">&#10095;</button>
         </div>
       </div>
     </section>
+  
     <section id="contact">
       <div class="contact-content">
         <h1>Kontaktujte nás</h1>
@@ -124,14 +139,30 @@
       <div class="logo-wrap">
         <img class="logo" src="./img/logo/FlamencafeLogo2.png" alt="Flamencafe logo">
       </div>
-      <p>Flamencafe &copy; 2024</p>
+      <!-- <p>Flamencafe &copy; 2024</p> -->
     </div>  
   </footer> 
   </main>
   
 <script src="./flamencaFe.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+<script>
+  function changeMainImage(src) {
+      document.getElementById('mainImage').src = src;
+  }
 
+  document.querySelector('.prev-arrow').addEventListener('click', () => {
+    // Logika pro posun doleva, posune o šířku jednoho náhledu včetně margin
+    document.querySelector('.preview-slider').scrollLeft -= 110; // 100px + 2*5px margin
+});
+
+document.querySelector('.next-arrow').addEventListener('click', () => {
+    // Logika pro posun doprava, posune o šířku jednoho náhledu včetně margin
+    document.querySelector('.preview-slider').scrollLeft += 110; // 100px + 2*5px margin
+});
+
+
+</script>
 </body>
 </html>
 
