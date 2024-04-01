@@ -16,40 +16,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// CONTACT FORM
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Zabrání klasickému odeslání formuláře
-
-    var formData = new FormData(this);
-    var errorMessage = document.getElementById('error-message');
-
-    fetch('sendEmail.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text()) // Převede odpověď na text
-    .then(data => {
-        // Zpracování odpovědi serveru
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = data;
-        errorMessage.style.color = 'green'; // Nastaví text zprávy na zelenou, pokud je vše v pořádku
-        // Vymaže formulář po úspěšném odeslání
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('message').value = '';
-    })
-    .catch((error) => {
-        // Zpracování chyby
-        errorMessage.style.display = 'block';
-        errorMessage.style.color = 'red'; // Zobrazí chybovou zprávu v červené barvě
-        errorMessage.textContent = 'Něco se pokazilo, zkuste to prosím znovu.';
-    });
-});
-
-
-// document.getElementById('contact-form').addEventListener('submit', validateForm);
-
-
 //GALLERY
 function changeMainImage(src) {
   document.getElementById('mainImage').src = src;
