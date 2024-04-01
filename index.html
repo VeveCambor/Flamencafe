@@ -19,7 +19,6 @@
   <header>
     <nav class="navbar" id="navbar">
       <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <!-- <div class="nav-menu"> -->
         <ul class="nav-links">
           <li class="nav-item">
             <a class="nav-link" href="#home">ÚVOD</a>
@@ -33,7 +32,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#contact">KONTAKT</a>
           </li>
-        <!-- </div> -->
         </ul>
     </nav>
   </header>
@@ -45,7 +43,6 @@
   </section> 
     <section id="about">
       <div class="about-content"> 
-        <!-- <h1>O nás</h1> -->
         <div class="about-text">
           <p>
             Flamenco...příme a emotivní, je zdrojem hudby pražské skupiny FlamencaFe, která rozvíjí jeho sílu vlastními výrazovými prostředky tak, aby jejich hudba nebyla pouhou imitací, ale autentickou "fusión", fúzí v nejlepším slova smyslu.
@@ -96,7 +93,6 @@
             <button class="slide-arrow prev-arrow">&#10094;</button>
             <div class="preview-slider">
                 <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_9526.jpg')" src="./img/gallery/IMG_9526.jpg" alt="Band Photo 1">
-                <!-- Další náhledy -->
                 <img class="preview-photo" onclick="changeMainImage('./img/gallery/flamencafe-m.jpg')" src="./img/gallery/flamencafe-m.jpg" alt="Band Photo 2">
                 <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_9148.jpg')" src="./img/gallery/IMG_9148.jpg" alt="Band Photo 3">
                 <img class="preview-photo" onclick="changeMainImage('./img/gallery/IMG_8951.jpg')" src="./img/gallery/IMG_8951.jpg" alt="Band Photo 4">
@@ -114,33 +110,30 @@
   
     <section id="contact">
       <div class="contact-content">
-        <h1>Kontaktujte nás</h1>
-        <form id="contactForm">
-          <div class="form-wrap">
-            <input type="text" name="name" id="name" placeholder="Vaše jméno" required>
-            <input type="email" name="email" id="email" placeholder="Váš email" required>            
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Text zprávy" required></textarea>            
-            <p id="error-message" style="color: red; display: none;"></p> <!-- Skryje se pokud není chyba -->
-            <button type="submit">Odeslat</button>
+        <h1 class="contact-title">Kontaktujte nás:</h1>
+          <div class="phone-wrap">
+            <i class="fas fa-phone"></i><span class="phone">+420 720 996 262</span>
           </div>
-        </form>
-        
-      </div>
-      <div id="formMessage" style="color: green; margin-top: 20px;"></div>
+          <div class="email-wrap">
+            <a href="mailto:flamencafe.band@gmail.com"><i class="fas fa-envelope"></i>flamencafe.band@gmail.com</a>
+          </div>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/musicaflamencafe" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/flamencafe/" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="logo-wrap">
+            <a href="./index.html">
+              <img class="logo" src="./img/logo/FlamencafeLogo2.png" alt="Flamencafe logo">
+            </a>
+          </div>
+        </div>
     </section>
 
     <footer>
-    <div class="footer-content">
-      <div class="logo-wrap">
-        <img class="logo" src="./img/logo/FlamencafeLogo2.png" alt="Flamencafe logo">
-      </div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/musicaflamencafe" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/flamencafe/" class="social-icon"><i class="fab fa-instagram"></i></a>
-      </div>
-      <!-- <p>Flamencafe &copy; 2024</p> -->
-    </div>  
-  </footer> 
+      <div class="footer-content">
+        <p>&copy;Wewa design&code 2024</p>
+      </div>  
+    </footer> 
   </main>
   
 <script src="./flamencaFe.js"></script>

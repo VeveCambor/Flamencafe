@@ -1,9 +1,11 @@
 :root {
-  --primary-color: rgb(251, 1, 13);
-  --secondary-color: rgb(0, 0, 0);
-  --terciary-color: rgb(255, 255, 255);
-  --bg-color: rgb(39, 39, 39);
+  --primary-color: #FF505E;
+  --secondary-color: #000000;
+  --terciary-color: #ffffff;
+  --bg-color: #1e1e1f;
+  /* --bg-color: #1E1E1E; */
   --nav-bg_mobile: rgb(0, 0, 0, 0.7);
+  --nav-text_color: #e80215;
 }
 
 *,

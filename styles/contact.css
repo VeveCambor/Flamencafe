@@ -1,67 +1,77 @@
-.contact-content {
-  width: 100%; /* Zajišťuje, že kontejner využívá celou dostupnou šířku */
-  max-width: 800px; /* Můžete upravit podle potřeby pro maximální šířku na velkých obrazovkách */
-  margin: auto; /* Centruje obsah na stránce */
-  padding: 20px; /* Přidává trochu prostoru okolo, aby formulář nebyl příliš přitlačený k okrajům */
-  display: flex; /* Používá flexbox pro lepší kontrolu nad layoutem */
-  flex-direction: column; /* Zajišťuje, že prvky jsou uspořádány vertikálně */
-  align-items: center; /* Centruje prvky ve flex kontejneru */
-}
-
-form {
-  width: 100%;
+#contact {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.form-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 600px; 
   gap: 1rem;
-  padding: 2rem; 
-  background-color: rgb(26, 26, 26);
-  border-radius: 10px;
+} 
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
 }
 
-input,
-textarea {
-  width: calc(100% - 20px); 
-  padding: 15px;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+.phone-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
 }
 
-button[type="submit"] {
-  width: auto;
-  min-width: 200px;
-  padding: 10px;
-  margin-top: 1rem;
-  background-color: var(--primary-color);
-  color: var(--terciary-color);
+.phone {
+  font-size: 1.5rem;
+}
+
+.email-wrap a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+  color: var(--primary-color);
   font-size: 1.2rem;
-  border-radius: 35px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-  box-shadow: 0 0 15px rgb(255, 255, 255, 0.4);
-}
-
-@media screen and (max-width: 768px) {
-  .contact-content,
-  .form-wrap {
-    width: 90%; 
-    padding: 1rem; 
   }
+
+.fas {
+  padding: 20px;
+  font-size: 35px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--terciary-color);
 }
 
+.social-icons {
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 
+.fab {
+  padding: 20px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--terciary-color);
+}
 
+.fab:hover {
+  opacity: 0.7;
+  color: var(--primary-color);
+}
+
+.logo-wrap {
+  width: 40%;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.logo {
+  width: 90%;
+  margin: 0 auto; 
+}

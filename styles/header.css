@@ -1,6 +1,6 @@
 header {
   background: none;
-  background: rgba(32, 32, 32, 0.4);
+  background: #131313f0;
   position: relative;
   top: 0px;
   left: 0;
@@ -19,7 +19,6 @@ header {
   max-width: 1700px;
   width: 100%;
   height: 50px;
-  /* padding: 0 10px; */
   z-index: 1;
 }
 
@@ -41,10 +40,12 @@ header {
 
 .nav-link {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--nav-text_color);
   text-align: center;
   padding: 14px 10px;
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
   display: block;
 }
 
@@ -58,13 +59,21 @@ header {
   font-size: 30px;
   color: var(--primary-color);
   cursor: pointer;
-  margin-right: 10px;
+  padding-left: 1rem;
 }
 
-.menu-icon:hover {
-  color: var(--secondary-color);
+.menu-icon.active {
+  color: #FF505E;
 }
 
 .nav-other-sections { 
-  background-color: #191818f0;
+  background-color: #131313f0;
  }
+
+.nav-other-sections .nav-link {
+  color: #FF505E;
+}
+
+.nav-other-sections .nav-link:hover {
+  color: #fff !important; 
+}
