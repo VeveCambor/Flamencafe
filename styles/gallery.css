@@ -45,12 +45,20 @@
   .preview-photo {
     min-width: 100px;
   }
+
+  .preview-slider {
+    max-width: 500px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .preview-photo {
     min-width: 80px;
   }
+
+  .preview-slider {
+    max-width: 300px;
+  }
+
 }
-```
 
