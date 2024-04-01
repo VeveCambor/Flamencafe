@@ -30,6 +30,9 @@
   margin: 0 5px; 
   cursor: pointer;
   border-radius: 4px;
+  object-fit: cover;
+  -o-object-fit: cover;
+  cursor: pointer;
 }
 
 .slide-arrow {
