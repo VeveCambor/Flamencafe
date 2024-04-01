@@ -28,6 +28,12 @@ body {
   line-height: 1.6;
   overflow: hidden;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* Sections */
