@@ -20,3 +20,13 @@ footer {
   justify-content: center; 
 }
 
+.footer-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--terciary-color);
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
