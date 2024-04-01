@@ -26,8 +26,8 @@
 }
 
 .preview-photo {
-  min-width: 150px; /* Nastavte šířku náhledu */
-  margin: 0 5px; /* Mezera mezi náhledy */
+  min-width: 150px; 
+  margin: 0 5px; 
   cursor: pointer;
   border-radius: 4px;
 }
@@ -41,20 +41,16 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 600px) {
-  .gallery .main-photo-container img {
-    max-width: 2%;
-  }
-
-  .preview-slider {
-    max-width: 5%;
-  }
-
-
-
-  .slide-arrow {
-    padding: 5px;
-    margin: 0 5px;
+@media screen and (max-width: 768px) {
+  .preview-photo {
+    min-width: 100px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .preview-photo {
+    min-width: 80px;
+  }
+}
+```
 

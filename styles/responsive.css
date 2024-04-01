@@ -67,17 +67,6 @@
     margin: 10px;
   }
 
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
-  }
-
-  /* .logo {
-    width: 50%;
-  } */
-
   .home-logo {
     width: 80%;
     position: relative;
@@ -97,18 +86,6 @@
     width: 80%;
   }
 
-  .gallery {
-    width: 50%;
-  }
-
-  .form {
-    width: 100%;
-  }
-
-  /* .logo {
-    width: 80%;
-  } */
-
   .home-logo {
     width: 100%;
     position: relative;
@@ -125,14 +102,6 @@
   .band-member-card {
     width: 100%;
   }
-
-  .gallery {
-    width: 100%;
-  }
-
-  /* .logo {
-    width: 100%;
-  } */
 
   .home-logo {
     width: 100%;
@@ -152,14 +121,6 @@
   .band-member-card {
     width: 100%;
   }
-
-  .gallery {
-    width: 100%;
-  }
-
-  /* .logo {
-    width: 100%;
-  } */
 
   .home-logo {
     width: 100%;
