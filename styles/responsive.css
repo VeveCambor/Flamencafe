@@ -59,12 +59,10 @@
   .band-members {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-  }
-
-  .band-member-card {
-    width: 40%;
-    margin: 10px;
+    align-items: center;
+    width: 100%;
   }
 
   .home-logo {
@@ -81,9 +79,17 @@
 }
 
 @media screen and (max-width: 425px) {
+  .about-content {
+    width: 90%;
+  }
 
-  .band-member-card {
-    width: 80%;
+  .band-members {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .home-logo {
@@ -99,9 +105,9 @@
 }
 
 @media screen and (max-width: 375px) {
-  .band-member-card {
-    width: 100%;
-  }
+  /* .band-member-card {
+    width: 50%;
+  } */
 
   .home-logo {
     width: 100%;

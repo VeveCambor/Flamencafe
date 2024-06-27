@@ -31,7 +31,7 @@
   text-decoration: none;
   color: var(--primary-color);
   font-size: 1.2rem;
-  }
+}
 
 .fas {
   padding: 20px;
@@ -92,5 +92,25 @@
 
   .logo {
     width: 100%;
+  }
+
+  /* Responsive CSS for mobile devices */
+  #contact {
+    flex-direction: column;
+  }
+
+  .phone-wrap {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .social-icons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .fab {
+    font-size: 30px;
+    padding: 10px;
   }
 }
