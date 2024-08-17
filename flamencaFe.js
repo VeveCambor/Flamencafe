@@ -31,4 +31,30 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+//SOUNDCLOUD
+document.getElementById('play-soundcloud').addEventListener('click', () => {
+  const playerContainer = document.getElementById('soundcloud-player');
+  const trackUrl = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1867969104&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
+  let iframe = playerContainer.querySelector('iframe');
 
+  if (playerContainer.style.display === 'none' || !iframe) {
+      playerContainer.style.display = 'block';
+      isPlayerOpen = true;
+
+      if (!iframe) {
+          iframe = document.createElement('iframe');
+          iframe.width = "100%";
+          iframe.height = "170";
+          iframe.scrolling = "no";
+          iframe.frameBorder = "no";
+          iframe.allow = "autoplay";
+          playerContainer.appendChild(iframe);
+      }
+
+      iframe.src = trackUrl;
+  } else {
+      playerContainer.style.display = 'none';
+      isPlayerOpen = false;
+      iframe.src = '';
+  }
+});

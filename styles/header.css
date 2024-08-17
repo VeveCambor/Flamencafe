@@ -40,7 +40,7 @@ header {
 
 .nav-link {
   background-color: transparent;
-  color: var(--nav-text_color);
+  color: var(--primary-color);
   text-align: center;
   padding: 14px 10px;
   text-decoration: none;
@@ -63,7 +63,7 @@ header {
 }
 
 .menu-icon.active {
-  color: #FF505E;
+  color: var(--primary-color);
 }
 
 .nav-other-sections { 
@@ -71,7 +71,7 @@ header {
  }
 
 .nav-other-sections .nav-link {
-  color: #FF505E;
+  color: var(--primary-color);
 }
 
 .nav-other-sections .nav-link:hover {

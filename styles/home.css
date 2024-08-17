@@ -1,5 +1,5 @@
 section#home {
-  background-image: url('../img/cover/IMG_9417-min.jpg');
+  background-image: url('../img/cover/page-background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,4 +14,64 @@ section#home {
   position: relative;
   top: 250px;
   right: 22%;
+}
+
+.custom-soundcloud {
+  position: relative; 
+  width: 100%;
+}
+
+.soundcloud-button {
+  position: absolute; 
+  bottom: 40px;
+  right: 80px; 
+  padding: 15px 20px;
+  background-color: #f71919;
+  color: var(--terciary-color);
+  border: none;
+  border-radius: 55px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.soundcloud-button:hover {
+  background-color: #d20202;
+}
+
+.soundcloud-player {
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  width: 300px;
+  transition: all 0.3s ease; 
+  display: none; 
+}
+
+@media (max-width: 768px) {
+  .soundcloud-button {
+    bottom: -120px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .soundcloud-button {
+    bottom: -120px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .soundcloud-player {
+    top: 300px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 250px;
+  }
 }
