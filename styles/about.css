@@ -2,9 +2,9 @@
 
 .about-content {
   text-align: center;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   /* margin: 0 auto; */
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .about-text {
@@ -14,13 +14,14 @@
   justify-content: center;
   gap: 2.3rem;
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
   font-size: 1.4rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 2.1rem;
   font-family: 'Dancing Script', serif;
+  color: var(--primary-color);
 }
 
 .logo-variation {
@@ -28,50 +29,61 @@ h3 {
   font-size: 2rem;
 }
 
-.band-members {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 10px 0;
-}
 
-.band-member-card {
-  background-color: var(--terciary-color);
-  width: 100%;
-  height: 500px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+.band-members {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 6rem;
+  width: 100%;
+  padding: 20px;
 }
 
-.band-member-card h3,
-.band-member-card p {
-  margin: 6px;
-  color: var(--secondary-color);
-  text-align: center;
+.about-member {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: start;
 }
 
-.band-member-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.img-member-container {
+  position: relative;
+  width: 450px; 
+  padding-top: 450px; 
+  overflow: hidden; 
+  border-radius: 10px; 
 }
 
-.band-member-card img {
+.img-member-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
-.member-img {
+.member-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+}
+
+.about-member-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 90%;
+}
+
+.member-name {
+  display: flex;
   justify-content: center;
   width: 100%;
-  height: 400px;
-  object-fit: contain;
-}
+  }
+
+  

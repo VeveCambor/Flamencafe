@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #ff1024;
+  --primary-color: #D4262F;
   --secondary-color: #000000;
   --terciary-color: #ffffff;
-  --bg-color: #1e1e1f;
+  --bg-color: #19191c;
   /* --bg-color: #1E1E1E; */
   --nav-bg_mobile: rgb(0, 0, 0, 0.7);
   --nav-text_color: #e80215;
@@ -60,6 +60,7 @@ h1 {
   margin-bottom: 2rem;
   font-size: 48px;
   font-weight: 500;
+  color: var(--primary-color);
 }
 
 span {

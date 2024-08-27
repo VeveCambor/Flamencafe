@@ -1,5 +1,5 @@
 footer {
-  background-color: #131313f0;
+  background-color: #000000;
   color: var(--terciary-color);
   text-align: center;
   padding: 20px;
@@ -21,12 +21,11 @@ footer {
 }
 
 .footer-link {
-  cursor: pointer;
   text-decoration: none;
   color: var(--terciary-color);
 }
 
-.footer-link:hover {
+/* .footer-link:hover {
   text-decoration: underline;
-}
+} */
 

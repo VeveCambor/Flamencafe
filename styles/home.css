@@ -26,7 +26,7 @@ section#home {
   bottom: 40px;
   right: 80px; 
   padding: 15px 20px;
-  background-color: #f71919;
+  background-color: var(--primary-color);
   color: var(--terciary-color);
   border: none;
   border-radius: 55px;
