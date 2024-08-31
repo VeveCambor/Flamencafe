@@ -80,10 +80,19 @@ h3 {
   width: 90%;
 }
 
+.about-member-container:nth-child(even) .member-info {
+  order: 1;
+}
+
+.about-member-container:nth-child(even) .img-member-container {
+  order: 2;
+}
+
 .member-name {
   display: flex;
   justify-content: center;
   width: 100%;
-  }
+}
+
 
   

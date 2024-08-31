@@ -56,6 +56,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .logo-variation {
+    font-size: 1.8rem;
+  }
+
   .band-members {
     display: flex;
     flex-wrap: wrap;
@@ -65,9 +69,18 @@
     width: 100%;
   }
 
-  .about-member {
+  .about-member{
     display: flex;
     flex-direction: column;
+  }
+
+
+  .member-info {
+    order: 2;
+  }
+
+  .img-member-container {
+    order: 1;
   }
 
   .home-logo {
@@ -100,6 +113,15 @@
   .about-member {
     display: flex;
     flex-direction: column;
+  }
+
+
+  .member-info {
+    order: 2;
+  }
+
+  .img-member-container {
+    order: 1;
   }
 
   .home-logo {
