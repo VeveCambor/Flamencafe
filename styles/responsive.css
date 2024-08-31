@@ -1,6 +1,21 @@
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   button[type="submit"] {
     width: 40%;
+  }
+
+  .about-member {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .img-member-container {
+    order: 1;
+    margin: 0 auto;
+  }
+
+  .member-info {
+    order: 2;
+    text-align: center;
   }
 }
 
@@ -8,6 +23,7 @@
   body {
     overflow: hidden;
     overflow-y: auto;
+    font-size: 14px;
   }
 
   .menu-icon {
@@ -24,7 +40,7 @@
     width: 100%;
     flex-direction: column;
     align-items: start;
-    background: #191818f0;;
+    background: #191818f0;
     padding: 2rem;
     font-size: 20px;
   }
@@ -46,41 +62,21 @@
     height: 50vh;
   }
 
-  body {
-    font-size: 14px;
-  }
-
   section {
     padding: 0 10px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .logo-variation {
-    font-size: 1.8rem;
+  .about-member {
+    flex-direction: column;
   }
 
   .band-members {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
-  }
-
-  .about-member{
-    display: flex;
-    flex-direction: column;
-  }
-
-
-  .member-info {
-    order: 2;
-  }
-
-  .img-member-container {
-    order: 1;
+    gap: 4rem; 
   }
 
   .home-logo {
@@ -90,10 +86,9 @@
     right: 10%;
   }
 
-  body {
-    font-size: 14px;
+  .logo-variation {
+    font-size: 1.5rem;
   }
-
 }
 
 @media screen and (max-width: 425px) {
@@ -102,34 +97,34 @@
   }
 
   .band-members {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 90%;
+    gap: 2rem; 
   }
 
-  .about-member {
-    display: flex;
-    flex-direction: column;
-  }
-
-
-  .member-info {
-    order: 2;
+  .about-member-container {
+    margin-bottom: 1rem;
+    gap: 1rem;
   }
 
   .img-member-container {
-    order: 1;
     width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 2rem;
   }
 
-  .home-logo {
-    width: 100%;
+  .member-info {
+    text-align: center;
+  }
+ 
+  .img-member-container img {
     position: relative;
-    top: 150px;
-    right: 0;
+  }
+
+  .logo-variation {
+    font-size: 1.3rem;
   }
 
   body {
@@ -138,9 +133,13 @@
 }
 
 @media screen and (max-width: 375px) {
-  /* .band-member-card {
-    width: 50%;
-  } */
+  .band-members {
+    gap: 1.5rem;
+  }
+
+  .about-member-container {
+    margin-bottom: 0.5rem;
+  }
 
   .home-logo {
     width: 100%;
@@ -152,13 +151,15 @@
   body {
     font-size: 12px;
   }
-  
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
+  .band-members {
+    gap: 1rem;
+  }
 
-  .band-member-card {
-    width: 100%;
+  .about-member-container {
+    margin-bottom: 0.25rem;
   }
 
   .home-logo {
@@ -168,8 +169,11 @@
     right: 0;
   }
 
+  .logo-variation {
+    font-size: 1rem;
+  }
+
   body {
     font-size: 12px;
   }
-  
 }
