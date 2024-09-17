@@ -36,6 +36,7 @@ section#home {
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .soundcloud-button:hover {
