@@ -1,5 +1,5 @@
 section#home {
-  background-image: url('../img/cover/page-background.jpg');
+  background-image: url('../img/cover/finalbandphoto.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,10 +10,12 @@ section#home {
 }
 
 .home-logo {
-  width: 55%;
+  width: 65%;
   position: relative;
   top: 250px;
-  right: 22%;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0.611);
+  border-radius: 10px;
 }
 
 .custom-soundcloud {
@@ -28,7 +30,7 @@ section#home {
   padding: 15px 20px;
   background-color: var(--primary-color);
   color: var(--terciary-color);
-  border: none;
+  border: 3px solid  var(--primary-color);
   border-radius: 55px;
   cursor: pointer;
   font-size: 16px;
