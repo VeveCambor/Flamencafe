@@ -83,7 +83,6 @@
     width: 100%;
     position: relative;
     top: 150px;
-    right: 10%;
   }
 
   .logo-variation {
@@ -117,6 +116,7 @@
 
   .member-info {
     text-align: center;
+    width: 100%;
   }
  
   .img-member-container img {
@@ -145,7 +145,6 @@
     width: 100%;
     position: relative;
     top: 150px;
-    right: 0;
   }
 
   body {
@@ -166,7 +165,6 @@
     width: 100%;
     position: relative;
     top: 150px;
-    right: 0;
   }
 
   .logo-variation {
