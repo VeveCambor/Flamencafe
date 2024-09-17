@@ -42,6 +42,27 @@
   margin: 0 10px;
 }
 
+.modal-arrow_p,
+.modal-arrow_n {
+  cursor: pointer;
+  background: #ddd;
+  position: fixed;
+  border: none;
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.modal-arrow_p {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.modal-arrow_n {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+
 /* Styl pro modální okno */
 .modal {
   display: none; 

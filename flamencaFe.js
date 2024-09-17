@@ -17,19 +17,6 @@ window.addEventListener('scroll', () => {
 });
 
 //GALLERY
-// function changeMainImage(src) {
-//   document.getElementById('mainImage').src = src;
-// }
-
-// document.addEventListener('DOMContentLoaded', function() {
-//   document.querySelector('.prev-arrow').addEventListener('click', () => {
-//     document.querySelector('.preview-slider').scrollLeft -= 110;
-//   });
-
-//   document.querySelector('.next-arrow').addEventListener('click', () => {
-//     document.querySelector('.preview-slider').scrollLeft += 110;
-//   });
-// });
 document.addEventListener('DOMContentLoaded', function() {
   // Získání modálního okna a obrázku
   const modal = document.getElementById("myModal");
@@ -71,6 +58,49 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.next-arrow').addEventListener('click', () => {
     document.querySelector('.preview-slider').scrollLeft += 110;
   });
+
+   // Přidání funkce procházení fotek pomocí šipek
+   let index = 0; // index aktuálního obrázku
+   const images = Array.from(previewPhotos).map(img => img.src); // pole s URL obrázků
+ 
+   // funkce pro zobrazení obrázku podle aktuálního indexu
+   function showImage() {
+     modalImg.src = images[index];
+   }
+ 
+   // funkce pro posunutí na další obrázek
+   function nextImage() {
+     index++;
+     if (index >= images.length) { // pokud jsme na konci pole, vrátíme se na začátek
+       index = 0;
+     }
+     showImage();
+   }
+ 
+   // funkce pro posunutí na předchozí obrázek
+   function previousImage() {
+     index--;
+     if (index < 0) { // pokud jsme na začátku pole, přejdeme na konec
+       index = images.length - 1;
+     }
+     showImage();
+   }
+
+    // přidání událostí pro tlačítka
+  document.querySelector('.modal-arrow_p').addEventListener('click', previousImage);
+  document.querySelector('.modal-arrow_n').addEventListener('click', nextImage);
+
+ 
+   // přidání událostí pro klávesy šipek
+   document.addEventListener('keydown', function(event) {
+     if (modal.style.display === 'block') { // pokud je modální okno otevřené
+       if (event.key === 'ArrowRight') { // šipka doprava
+         nextImage();
+       } else if (event.key === 'ArrowLeft') { // šipka doleva
+         previousImage();
+       }
+     }
+   });
 
   //SOUNDCLOUD
   document.getElementById('play-soundcloud').addEventListener('click', () => {
