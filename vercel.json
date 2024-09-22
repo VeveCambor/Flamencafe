@@ -1,9 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/flamencafe", "destination": "#home" },
-    { "source": "/onas", "destination": "#about" },
-    { "source": "/aktualne", "destination": "#news" },
-    { "source": "/galerie", "destination": "#gallery" },
-    { "source": "/kontakty", "destination": "#contact" }
-  ]
-}

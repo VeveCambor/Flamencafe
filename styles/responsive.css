@@ -70,6 +70,7 @@
 @media screen and (max-width: 768px) {
   .about-member {
     flex-direction: column;
+    width: 100%;
   }
 
   .band-members {
@@ -93,7 +94,7 @@
 
 @media screen and (max-width: 425px) {
   .about-content {
-    width: 90%;
+    width: 100%;
   }
 
   .band-members {
