@@ -115,6 +115,14 @@
   transform: scale(2); /* (200% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
+
+/* POSTER */
+.poster {
+  width: 40%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .preview-photo {
@@ -123,6 +131,10 @@
 
   .preview-slider {
     max-width: 500px;
+  }
+
+  .poster {
+    width: 80%;
   }
 }
 
