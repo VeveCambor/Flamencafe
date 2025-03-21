@@ -1,132 +1,102 @@
-// NAVBAR
-document.querySelector('.menu-icon').addEventListener('click', function() {
-  this.classList.toggle('active');
-  document.querySelector('.nav-links').classList.toggle('hide');
-});
-
-window.addEventListener('scroll', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  // === NAVBAR TOGGLE ===
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.querySelector('.nav-links');
   const navbar = document.getElementById('navbar');
-  const sectionHome = document.getElementById('home').offsetTop + document.getElementById('home').offsetHeight;
-  const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  const sectionHome = document.getElementById('uvod'); // Správný ID byl "uvod", ne "home"
 
-  if (scrollPosition >= sectionHome) {
-    navbar.classList.add('nav-other-sections');
-  } else {
-    navbar.classList.remove('nav-other-sections');
-  }
-});
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('active');
+    navLinks.classList.toggle('hide');
+  });
 
-//GALLERY
-document.addEventListener('DOMContentLoaded', function() {
-  // Získání modálního okna a obrázku
-  const modal = document.getElementById("myModal");
-  const modalImg = document.getElementById("img01");
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const homeBottom = sectionHome.offsetTop + sectionHome.offsetHeight;
 
-  // Přidání události onclick pro hlavní obrázek
+    navbar.classList.toggle('nav-other-sections', scrollPosition >= homeBottom);
+  });
+
+  // === GALLERY MODAL ===
+  const modal = document.getElementById('myModal');
+  const modalImg = document.getElementById('img01');
   const mainImage = document.getElementById('mainImage');
-  mainImage.addEventListener('click', function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-  
-    // Skryje navigaci
-    document.getElementById('navbar').style.visibility = 'hidden';
-  });
-  
-  const span = document.getElementsByClassName("close")[0];
-  span.addEventListener('click', function() { 
-    modal.style.display = "none";
-    // Zobrazí navigaci
-    document.getElementById('navbar').style.visibility = 'visible';
-  });
+  const previewPhotos = document.querySelectorAll('.preview-photo');
+  const modalClose = modal.querySelector('.close');
+  const modalPrev = modal.querySelector('.modal-arrow_p');
+  const modalNext = modal.querySelector('.modal-arrow_n');
+  const images = Array.from(previewPhotos).map(img => img.src);
+  let currentIndex = 0;
 
-  modalImg.addEventListener('click', function() {
-    this.classList.toggle('zoomed');
-  });
+  const showModalImage = (src) => {
+    modal.style.display = 'block';
+    modalImg.src = src;
+    navbar.style.visibility = 'hidden';
+    currentIndex = images.indexOf(src);
+  };
 
-  // Přidání události onclick pro všechny náhledové obrázky
-  const previewPhotos = document.getElementsByClassName("preview-photo");
-  for (let photo of previewPhotos) {
-    photo.addEventListener('click', function() {
-      mainImage.src = this.src;
-    });
-  }
+  const closeModal = () => {
+    modal.style.display = 'none';
+    navbar.style.visibility = 'visible';
+  };
+
+  const changeImage = (direction) => {
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    modalImg.src = images[currentIndex];
+  };
+
+  mainImage.addEventListener('click', () => showModalImage(mainImage.src));
+  modalClose.addEventListener('click', closeModal);
+  modalImg.addEventListener('click', () => modalImg.classList.toggle('zoomed'));
+  previewPhotos.forEach(photo => {
+    photo.addEventListener('click', () => (mainImage.src = photo.src));
+  });
 
   document.querySelector('.prev-arrow').addEventListener('click', () => {
-    document.querySelector('.preview-slider').scrollLeft -= 110;
+    document.querySelector('.preview-slider').scrollLeft -= 120;
   });
 
   document.querySelector('.next-arrow').addEventListener('click', () => {
-    document.querySelector('.preview-slider').scrollLeft += 110;
+    document.querySelector('.preview-slider').scrollLeft += 120;
   });
 
-   // Přidání funkce procházení fotek pomocí šipek
-   let index = 0; // index aktuálního obrázku
-   const images = Array.from(previewPhotos).map(img => img.src); // pole s URL obrázků
- 
-   // funkce pro zobrazení obrázku podle aktuálního indexu
-   function showImage() {
-     modalImg.src = images[index];
-   }
- 
-   // funkce pro posunutí na další obrázek
-   function nextImage() {
-     index++;
-     if (index >= images.length) { // pokud jsme na konci pole, vrátíme se na začátek
-       index = 0;
-     }
-     showImage();
-   }
- 
-   // funkce pro posunutí na předchozí obrázek
-   function previousImage() {
-     index--;
-     if (index < 0) { // pokud jsme na začátku pole, přejdeme na konec
-       index = images.length - 1;
-     }
-     showImage();
-   }
+  modalPrev.addEventListener('click', () => changeImage(-1));
+  modalNext.addEventListener('click', () => changeImage(1));
 
-    // přidání událostí pro tlačítka
-  document.querySelector('.modal-arrow_p').addEventListener('click', previousImage);
-  document.querySelector('.modal-arrow_n').addEventListener('click', nextImage);
+  document.addEventListener('keydown', (event) => {
+    if (modal.style.display === 'block') {
+      if (event.key === 'ArrowRight') changeImage(1);
+      if (event.key === 'ArrowLeft') changeImage(-1);
+      if (event.key === 'Escape') closeModal();
+    }
+  });
 
- 
-   // přidání událostí pro klávesy šipek
-   document.addEventListener('keydown', function(event) {
-     if (modal.style.display === 'block') { // pokud je modální okno otevřené
-       if (event.key === 'ArrowRight') { // šipka doprava
-         nextImage();
-       } else if (event.key === 'ArrowLeft') { // šipka doleva
-         previousImage();
-       }
-     }
-   });
-
-  //SOUNDCLOUD
-  document.getElementById('play-soundcloud').addEventListener('click', () => {
+  // === SOUNDCLOUD PLAYER ===
+  const playButton = document.getElementById('play-soundcloud');
   const playerContainer = document.getElementById('soundcloud-player');
   const trackUrl = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1867969104&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true";
-  let iframe = playerContainer.querySelector('iframe');
 
-  if (playerContainer.style.display === 'none' || !iframe) {
+  playButton.addEventListener('click', () => {
+    const iframe = playerContainer.querySelector('iframe');
+
+    if (!iframe) {
+      const newIframe = document.createElement('iframe');
+      newIframe.width = "100%";
+      newIframe.height = "170";
+      newIframe.scrolling = "no";
+      newIframe.frameBorder = "no";
+      newIframe.allow = "autoplay";
+      newIframe.src = trackUrl;
+      playerContainer.appendChild(newIframe);
       playerContainer.style.display = 'block';
-      isPlayerOpen = true;
-
-      if (!iframe) {
-          iframe = document.createElement('iframe');
-          iframe.width = "100%";
-          iframe.height = "170";
-          iframe.scrolling = "no";
-          iframe.frameBorder = "no";
-          iframe.allow = "autoplay";
-          playerContainer.appendChild(iframe);
+    } else {
+      if (playerContainer.style.display === 'none') {
+        iframe.src = trackUrl;
+        playerContainer.style.display = 'block';
+      } else {
+        iframe.src = '';
+        playerContainer.style.display = 'none';
       }
-
-      iframe.src = trackUrl;
-  } else {
-      playerContainer.style.display = 'none';
-      isPlayerOpen = false;
-      iframe.src = '';
-  }
-}); 
+    }
+  });
 });
