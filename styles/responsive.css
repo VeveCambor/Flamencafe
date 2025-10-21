@@ -120,6 +120,12 @@
     text-align: center;
     width: 100%;
   }
+
+  .member-bio {
+    width: 100%;
+    max-width: none;
+    padding: 0 0.5rem;
+  }
  
   .img-member-container img {
     position: relative;

@@ -19,6 +19,13 @@ section#uvod {
   padding: 2rem 0;
 }
 
+@media (max-width: 768px) {
+  .intro-text {
+    margin-top: 0.3rem;
+    padding: 1rem 0;
+  }
+}
+
 .home-logo {
   width: 55%;
   position: relative;
