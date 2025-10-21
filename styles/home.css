@@ -1,9 +1,9 @@
 section#uvod {
-  background-image: url('../img/cover/finalbandphoto.png');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../img/cover/newcover.JPG');
+  background-size: 100% auto;
+  background-position: 60% top;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -20,9 +20,9 @@ section#uvod {
 }
 
 .home-logo {
-  width: 65%;
+  width: 55%;
   position: relative;
-  top: 250px;
+  top: 280px;
   right: 0%;
   background-color: rgba(0, 0, 0, 0.611);
   border-radius: 10px;
@@ -33,20 +33,41 @@ section#uvod {
   width: 100%;
 }
 
-.soundcloud-button {
-  position: absolute; 
-  bottom: 40px;
-  right: 80px; 
-  padding: 15px 20px;
+.floating-note {
+  position: fixed; 
+  top: 100px;
+  right: 20px; 
+  width: 60px;
+  height: 60px;
   background-color: var(--primary-color);
   color: var(--terciary-color);
-  border: 3px solid  var(--primary-color);
-  border-radius: 55px;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10001;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-note:hover {
+  background-color: #b00000;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .soundcloud-button:hover {
@@ -54,42 +75,47 @@ section#uvod {
 }
 
 .soundcloud-player {
-  position: absolute; 
-  top: 20px; 
+  position: fixed; 
+  top: 100px; 
   right: 20px; 
   width: 300px;
   transition: all 0.3s ease; 
   display: none; 
+  z-index: 999;
 }
 
-@media (max-width: 768px) {
-  .soundcloud-button {
-    bottom: 120px;
-    right: 50%;
-    transform: translateX(50%);
-    font-size: 14px;
+@media (max-width: 950px) {
+  .floating-note {
+    top: 60px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    z-index: 10002;
   }
 
   .soundcloud-player {
-    top: -50px;
-    right: 50%;
-    transform: translateX(50%);
+    top: 120px;
+    right: 15px;
     width: 250px;
+    z-index: 10001;
   }
 }
 
 @media (max-width: 480px) {
-  .soundcloud-button {
-    bottom: 120px;
-    right: 50%;
-    transform: translateX(50%);
-    font-size: 12px;
+  .floating-note {
+    top: 60px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    z-index: 10002;
   }
 
   .soundcloud-player {
-    top: -50px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 250px;
+    top: 120px;
+    right: 10px;
+    width: 200px;
+    z-index: 10001;
   }
 }
