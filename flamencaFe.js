@@ -31,18 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const showModalImage = (src) => {
     modal.style.display = 'block';
     modalImg.src = src;
+    modalImg.classList.remove('zoomed');
     navbar.style.visibility = 'hidden';
     currentIndex = images.indexOf(src);
   };
 
   const closeModal = () => {
     modal.style.display = 'none';
+    modalImg.classList.remove('zoomed');
     navbar.style.visibility = 'visible';
   };
 
   const changeImage = (direction) => {
     currentIndex = (currentIndex + direction + images.length) % images.length;
     modalImg.src = images[currentIndex];
+    modalImg.classList.remove('zoomed');
   };
 
   mainImage.addEventListener('click', () => showModalImage(mainImage.src));

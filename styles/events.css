@@ -1,0 +1,156 @@
+#akce {
+  padding: 2rem 1.5rem;
+}
+
+.events-list {
+  width: 100%;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.event-block {
+  width: 100%;
+}
+
+.event-block.is-open {
+  grid-column: 1 / -1;
+}
+
+.event-preview {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  color: inherit;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-preview:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(212, 38, 47, 0.25);
+}
+
+.event-cover {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.event-preview-info {
+  padding: 1rem 0.5rem 0;
+}
+
+.event-title {
+  font-family: 'Dancing Script', serif;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.event-meta {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.event-toggle {
+  font-size: 0.9rem;
+  color: var(--terciary-color);
+  opacity: 0.8;
+}
+
+.event-block.is-open .event-toggle::after {
+  content: ' ▲';
+}
+
+.event-block:not(.is-open) .event-toggle::after {
+  content: ' ▼';
+}
+
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.event-block:not(.is-open) .event-gallery {
+  display: none;
+}
+
+.event-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-photo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(212, 38, 47, 0.35);
+}
+
+@media screen and (min-width: 1200px) {
+  .events-list {
+    max-width: 1140px;
+    gap: 2rem;
+  }
+
+  .event-title {
+    font-size: 2.2rem;
+  }
+
+  .event-meta {
+    font-size: 1.05rem;
+  }
+
+  .event-toggle {
+    font-size: 1rem;
+  }
+
+  .event-preview-info {
+    padding: 1.2rem 0.5rem 0;
+  }
+
+  .event-gallery {
+    gap: 12px;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .events-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .event-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .event-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .event-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .event-title {
+    font-size: 1.5rem;
+  }
+}

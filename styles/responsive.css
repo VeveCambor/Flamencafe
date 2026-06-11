@@ -3,23 +3,24 @@
     width: 40%;
   }
 
-  .about-member {
+  .about-member,
+  .about-member--reverse {
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     gap: 2rem;
   }
 
-  .img-member-container {
-    order: 1;
+  .img-member {
+    max-width: 400px;
     margin: 0 auto;
-    width: 400px;
-    padding-top: 400px;
   }
 
   .member-info {
-    order: 2;
-    text-align: center;
     width: 100%;
+  }
+
+  .member-bio {
+    text-align: justify;
   }
 
   h1 {
@@ -99,7 +100,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .about-member {
+  .about-member,
+  .about-member--reverse {
     flex-direction: column;
     width: 100%;
     gap: 2rem;
@@ -113,10 +115,8 @@
     padding: 10px 15px;
   }
 
-  .home-logo {
+  .home-logo-wrap {
     width: 90%;
-    position: relative;
-    top: 150px;
   }
 
   .logo-variation {
@@ -145,9 +145,9 @@
     margin: 1.5rem 0;
   }
 
-  .img-member-container {
-    width: 85%;
-    max-width: 400px;
+  .img-member {
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   .poster {
@@ -184,15 +184,12 @@
     width: 100%;
   }
 
-  .img-member-container {
-    width: 85%;
-    max-width: 350px;
+  .img-member {
+    max-width: 300px;
     margin: 0 auto;
-    padding-top: 1.5rem;
   }
 
   .member-info {
-    text-align: center;
     width: 100%;
     padding: 0 5px;
   }
@@ -203,16 +200,13 @@
     padding: 0 0.5rem;
     font-size: 0.95rem;
     line-height: 1.5;
+    text-align: justify;
   }
 
   .member-name h3 {
     font-size: 1.5rem;
   }
  
-  .img-member-container img {
-    position: relative;
-  }
-
   .logo-variation {
     font-size: 1.3rem;
   }
@@ -270,9 +264,9 @@
     gap: 0.8rem;
   }
 
-  .img-member-container {
-    width: 90%;
-    max-width: 320px;
+  .img-member {
+    max-width: 280px;
+    margin: 0 auto;
   }
 
   .member-bio {
@@ -284,10 +278,8 @@
     font-size: 1.3rem;
   }
 
-  .home-logo {
+  .home-logo-wrap {
     width: 95%;
-    position: relative;
-    top: 150px;
   }
 
   h1 {
@@ -346,10 +338,9 @@
     gap: 0.6rem;
   }
 
-  .img-member-container {
-    width: 95%;
-    max-width: 300px;
-    padding-top: 1rem;
+  .img-member {
+    max-width: 260px;
+    margin: 0 auto;
   }
 
   .member-bio {
@@ -362,10 +353,8 @@
     font-size: 1.2rem;
   }
 
-  .home-logo {
+  .home-logo-wrap {
     width: 98%;
-    position: relative;
-    top: 150px;
   }
 
   h1 {

@@ -6,6 +6,7 @@ section#uvod {
   height: 80vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -26,13 +27,28 @@ section#uvod {
   }
 }
 
-.home-logo {
+.home-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+}
+
+.home-logo-wrap {
   width: 55%;
-  position: relative;
-  top: 280px;
-  right: 0%;
   background-color: rgba(0, 0, 0, 0.611);
   border-radius: 10px;
+  padding: 0 1.75rem;
+  line-height: 0;
+}
+
+.home-logo {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .custom-soundcloud {
